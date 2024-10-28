@@ -1,0 +1,71 @@
+# #!/bin/bash
+
+# # Set the base URL for your API
+# BASE_URL="http://localhost:4000"
+
+
+# # Test the '/' endpoint (GET)
+# echo 'Base url'
+# curl -X GET "$BASE_URL/"
+
+# echo -e '\n\nGet employees'
+# # Make sure to include your authentication token if required
+# curl -X GET "$BASE_URL/employees?signature=0xc8d89a6ae315784a24231795bfc66ade895426d1c48b1fe7323757ee9959239677bd657d06971129ab37e963c112b1ff92ff14834481cc6acf0460ebb0a8ce4e1b"
+
+# echo -e "\n\nTest the '/employee' endpoint (POST) with sample data"
+# curl -X POST "$BASE_URL/employee/" -H "Content-Type: application/json" -d '{
+#   "firstName": "John",
+#   "lastName": "Doe",
+#   "walletAddress": "0x1234567890abcdef",
+#   "wages": 60000, 
+#   "signature": "0xc8d89a6ae315784a24231795bfc66ade895426d1c48b1fe7323757ee9959239677bd657d06971129ab37e963c112b1ff92ff14834481cc6acf0460ebb0a8ce4e1b"
+# }'
+
+# echo -e "\n\nTest the '/employees' endpoint (POST) for bulk employee creation"
+
+# curl -X POST "$BASE_URL/employees" -H "Content-Type: application/json" -d '{
+#     "employees": [
+#         {
+#             "firstName": "Employee1",
+#             "lastName": "Last1",
+#             "walletAddress": "0xemployee1",
+#             "wages": 50000
+#         },
+#         {
+#             "firstName": "Employee2",
+#             "lastName": "Last2",
+#             "walletAddress": "0xemployee2",
+#             "wages": 55000
+#         }
+#     ],
+#     "signature": "0xc8d89a6ae315784a24231795bfc66ade895426d1c48b1fe7323757ee9959239677bd657d06971129ab37e963c112b1ff92ff14834481cc6acf0460ebb0a8ce4e1b"
+# }'
+
+
+# echo -e "\n\nTest the '/employee/:employeeId' endpoint (GET) for getting a single employee"
+# # Replace with the employee ID
+# curl -X GET "$BASE_URL/employee/employeeId" -H "Content-Type: application/json" -d '{
+#   "signature": "0xc8d89a6ae315784a24231795bfc66ade895426d1c48b1fe7323757ee9959239677bd657d06971129ab37e963c112b1ff92ff14834481cc6acf0460ebb0a8ce4e1b"
+# }'
+
+
+# echo -e "\n\nTest the '/employee/:employeeId' endpoint (PUT) for updating an employee"
+# # Replace with the employee ID and updated data
+# curl -X PUT "$BASE_URL/employee/employeeId" -H "Content-Type: application/json" -d '{
+#   "signature": "0xc8d89a6ae315784a24231795bfc66ade895426d1c48b1fe7323757ee9959239677bd657d06971129ab37e963c112b1ff92ff14834481cc6acf0460ebb0a8ce4e1b",
+#   "data": {"firstName": "NewUpdatedName"}
+# }'
+
+# echo -e "\n\nTest the '/employee/:employeeId' endpoint (GET) for getting a single employee"
+# # Replace with the employee ID
+# curl -X GET "$BASE_URL/employee/employeeId" -H "Content-Type: application/json" -d '{
+#   "signature": "0xc8d89a6ae315784a24231795bfc66ade895426d1c48b1fe7323757ee9959239677bd657d06971129ab37e963c112b1ff92ff14834481cc6acf0460ebb0a8ce4e1b"
+# }'
+
+# echo -e "\n\nTest the '/employee/:employeeId endpoint (DELETE) for deleting an employee"
+# # Replace with the employee ID
+# curl -X DELETE "$BASE_URL/employee/employeeId" -H "Content-Type: application/json" -d '{
+#   "signature": "0xc8d89a6ae315784a24231795bfc66ade895426d1c48b1fe7323757ee9959239677bd657d06971129ab37e963c112b1ff92ff14834481cc6acf0460ebb0a8ce4e1b"
+# }'
+
+# echo
